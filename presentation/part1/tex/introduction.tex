@@ -31,7 +31,7 @@
 	\newline 
 	Preferred,  
 	\begin{align}
-	f(x;\theta_1,\theta_2) &=& \theta_1x+\theta_2	
+	f(x;\theta_1,\theta_2) &= \theta_1x+\theta_2	
 	\end{align}
 
 	\end{block}
@@ -42,16 +42,16 @@
 		Let $L_i$ be the squared Euclidean distance between the predicted 
 		value, $\hat{y_i}=f(x_i)$ and the actual, $y_i$. Then,  
 		\begin{align}
-		L_i &=&z_i^2 \\
-		z_i &=&y_i-f(x_i)\\
-		    &=&y_i-\theta_1 x_i-\theta_2 
+		L_i &=z_i^2 \\
+		z_i &=y_i-f(x_i)\\
+		    &=y_i-\theta_1 x_i-\theta_2 
 		\end{align}
 		Minimizing $L_i$ with respect to the parameters $\theta_1$ and $\theta_2$,
 		\begin{align}
-		\frac{\partial L_i}{\partial \theta_1} &=& 
+		\frac{\partial L_i}{\partial \theta_1} &= 
 		\frac{\partial z_i^2}{\partial z_i} \; 
 		\frac{\partial z_i}{\partial \theta_1}  \\
-		\frac{\partial L_i}{\partial \theta_2} &=& 
+		\frac{\partial L_i}{\partial \theta_2} &= 
 		\frac{\partial z_i^2}{\partial z_i} \; 
 		\frac{\partial z_i}{\partial \theta_2}  \\
 		\end{align}

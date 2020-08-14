@@ -1,0 +1,87 @@
+\section{Adding non-linearity}
+\begin{frame}{Using sigmoid}
+	\begin{block}{Definition}
+		\begin{align}
+			\sigma(x)  &=& \frac{1}{1+e^{-x}}  \\
+			\frac{d}{d x}\sigma(x) & = & \sigma(x) (1-\sigma(x))
+		\end{align}
+	\end{block}
+	\begin{block}{Assuming a non-linear function}
+		Let our function be $y=\sigma(\theta_1 x+\theta_2)$. 
+	\end{block}
+\end{frame}
+\begin{frame}{Making a non-linear function}
+	\begin{block}{New function and the squared error}  
+	\begin{align}
+	z&=&\sigma(\hat{y}) \\
+	\hat{y} &=& \theta_1 x+\theta_2  
+	\end{align}
+	Error $L_i$ for the ith data point 
+	
+	\begin{align}
+	L_i&=&(\sigma(\theta_1 x_i+\theta_2) - y_i)^2   
+	\end{align}
+	
+\end{block}
+\end{frame}
+\begin{frame}{Finding best $\theta$s}
+\begin{block}{Minimizing $L_i$}
+	\begin{align}
+		L_i &=&\Delta_i^2 \\
+	\Delta_i &=& z_i-y_i \\
+	z_i&=&\sigma(\hat{y_i}) \\
+	\hat{y_i} &=& \theta_1 x_i+\theta_2  \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\frac{\partial L_i}{\partial \theta_1} &=&
+	\underbrace{ 
+	\frac{\partial \Delta_i^2}{\partial \Delta_i} \; 
+	\frac{\partial \Delta_i}{\partial z_i}  \;
+	\frac{\partial z_i}{\partial \hat{y_i}} }\;
+	\frac{\partial \hat{y_i}}{\partial \theta_1} \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\frac{\partial L_i}{\partial \theta_2} &=&
+	\underbrace{ 
+	\frac{\partial \Delta_i^2}{\partial \Delta_i} \;  
+	\frac{\partial \Delta_i}{\partial z_i}  \;
+	\frac{\partial z_i}{\partial \hat{y_i}} } \;
+	\frac{\partial \hat{y_i}}{\partial \theta_2} 
+	\end{align}
+\end{block}
+\end{frame}
+\begin{frame}{Finding best $\theta$s}
+\begin{block}{Updates to $\theta_1$ and $\theta_2$}
+	\begin{align}
+	\frac{\partial L_i}{\partial \theta_1} &=&
+	\underbrace{ 
+		\frac{\partial \Delta_i^2}{\partial \Delta_i}  
+		\frac{\partial \Delta_i}{\partial z_i}  
+		\frac{\partial z_i}{\partial \hat{y_i}} }
+	\frac{\partial \hat{y_i}}{\partial \theta_1} \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\frac{\partial L_i}{\partial \theta_2} &=&
+	\underbrace{ 
+		\frac{\partial \Delta_i^2}{\partial \Delta_i}  
+		\frac{\partial \Delta_i}{\partial z_i}  
+		\frac{\partial z_i}{\partial \hat{y_i}} }
+	\frac{\partial \hat{y_i}}{\partial \theta_2} \\
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\theta_{1_{p+1}} &=& \theta_{1_p} - \eta \frac{\partial L_i}{\partial \theta_1} \\
+	\theta_{2_{p+1}} &=& \theta_{2_p} - \eta \frac{\partial L_i}{\partial \theta_2} 
+	\end{align}
+\end{block}
+\end{frame}
+
+\begin{frame}{Finding best $\theta$s}
+\begin{block}{Updates to $\theta_1$ and $\theta_2$}
+	\begin{align}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\theta_{1_{p+1}} &=& \theta_{1_p} - \eta \frac{\partial L_i}{\partial \theta_1} \\
+	\theta_{2_{p+1}} &=& \theta_{2_p} - \eta \frac{\partial L_i}{\partial \theta_2}  
+	\end{align}
+\end{block}
+\begin{block}{Vectorized format}
+	\begin{align}
+	\vec{\theta_{p+1}} & = & \vec{\theta_p} - \eta \vec{\nabla_\theta L}
+	\end{align}
+\end{block}
+\end{frame}

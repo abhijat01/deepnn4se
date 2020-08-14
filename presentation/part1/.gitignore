@@ -1,8 +1,6 @@
 *.gz
-*.pdf
 *.aux
 *.log
-
 *.bbl
 *.blg
 *.nav

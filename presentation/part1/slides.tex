@@ -6,9 +6,10 @@
 \usefonttheme[onlymath]{serif}
 
 \usepackage{graphicx}
+\usepackage{caption}
 \usepackage{float}
 \usepackage{geometry}
-\usepackage{amsmath,amssymb,lmodern}
+\usepackage{amsmath,amssymb,lmodern, lipsum}
 \usepackage{url}
 \usepackage{pgfpages}
 \usepackage{enumerate}
@@ -63,7 +64,11 @@
 	stringstyle=\color{red}
 	}
 \begin{document}
-% Sumário
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
 \frame{\titlepage}
 \section[]{}
 \begin{frame}{Summary}
@@ -74,6 +79,7 @@
 \include{tex/introduction}
 \include{tex/sigmoid} 
 \include{tex/high-dim}
+\include{tex/multi-layer}
 \include{tex/basic-implementation}
 
 \section{References}

@@ -40,47 +40,5 @@
 \end{frame}
 \begin{frame}{More layers}
 	\includegraphics[width=.5\textwidth, center]{figuras/Colored_neural_network_1_hidden.png}
-	\tiny{https://en.wikipedia.org/wiki/Artificial\_neural\_network }
-\end{frame}
-\begin{frame}{Multiple layers}
-	\begin{block}{Layers (composition) of $ax+b$ style functions}
-		\begin{align*}
-		y &= \mathbb{W} x + b  \\
-		z &= \mathbb{U} y + c =\mathbb{U}(\mathbb{W}x+b)+c \\
-		  &= (\mathbb{U}\mathbb{W})x + (\mathbb{U}b+c) = \mathbb{V}x+d 
-		\end{align*}
-	\end{block}
-	\begin{block}{Introducing non-linearity with element-wise sigmoid}
-		\begin{align*}
-		y &= \mathbb{W}x+b \\ 
-		z &= \sigma(y) 
-		\end{align*}
-	\end{block}
-\end{frame}
-\begin{frame}{Multi-layer, feed forward, non-polynomial}
-	%\begin{block}{Multi-layer, feed forward network with non-polynomial activation}
-		\includegraphics[width=.4\textwidth, center]{figuras/Colored_neural_network_1_hidden.png}
-		\tiny{Image from: https://en.wikipedia.org/wiki/Artificial\_neural\_network }
-	%\end{block}
-	
-\end{frame}
-
-\begin{frame}{What can this neural network do?}
-\begin{quote}
-	{\small
-		A standard multilayer feedforward network with a locally bounded 
-		piecewise continuous activation function can approximate any continuous 
-		function to any degreeof accuracy if and only if the network's activation 
-		function is not a polynomial.\\
-		-Leshno et al.,1993
-	}
-\end{quote}
-\begin{quote}
-	{\small 
-	In particular, we show that arbitrary decision regions can
-	be arbitrarily well approximated by continuous feed forward neural networks with
-	only a single internal, hidden layer and any continuous sigmoidal nonlinearity.\\
-	-Cybenko, 1989 
-	}
-\end{quote}
+	\tiny{Image from https://en.wikipedia.org/wiki/Artificial\_neural\_network }
 \end{frame}

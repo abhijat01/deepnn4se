@@ -24,8 +24,10 @@
 \usepackage{romannum}
 %\usepackage{enumitem}
 \usepackage[export]{adjustbox}
-%\usepackage{natbib} 
-%\setcitestyle{numbers}
+
+%\usepackage{biblatex}
+%\addbibresource{bib/references.bib}
+
 \newcommand{\comment}[1]{}
 
 \setbeamertemplate{caption}[numbered]
@@ -81,23 +83,20 @@
 \end{frame}
 
 \input{tex/introduction}
-
-\section{Notations}
 \input{tex/intro-matrix-grad}
 \input{tex/intro-compute-graph}
-
 \include{tex/intro-2-fit}
 \include{tex/sigmoid} 
 \include{tex/high-dim}
 \include{tex/multi-layer}
 \include{tex/basic-implementation}
 
+\comment{
 \section{References}
-
 \begin{frame}[allowframebreaks]
 	\frametitle{References}
-		\bibliographystyle{amsalpha}
-		\bibliography{bib/references}
+	\printbibliography
 \end{frame}
+}
 
 \end{document}

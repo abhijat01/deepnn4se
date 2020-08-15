@@ -1,4 +1,4 @@
-
+\section{Computation graph}
 \begin{frame}{Computation graph } 
 	\begin{block}{ Partial derivatives of $f(x,y,z)= sin(x^2y)+e^z$}
 		\begin{align}
@@ -13,23 +13,6 @@
 	\begin{block}{ Compute graph of $f(x,y,z)= sin(x^2y)+e^z$}
 		\includegraphics[width=1.\textwidth, center]{figuras/backprop_eg1.png}
 	\end{block}
-\end{frame}
-
-\begin{frame}{Unit operations (and a little bit of python)\cite{DBLP:journals:corr:BaydinPR15:2018}}
-\begin{columns}
-	\begin{column}{.5\textwidth}
-		\includegraphics[width=.9\textwidth, center]{figuras/wx_forward_pass.png}
-		\lstinputlisting[language=Python, basicstyle=\tiny]{code/MultLayer.py}
-	\end{column}
-	\begin{column}{.5\textwidth}
-		\includegraphics[width=.9\textwidth, center]{figuras/wx_backward_pass.png}
-		\lstinputlisting[language=Python, basicstyle=\tiny]{code/AddLayer.py}
-	\end{column}
-\end{columns}
-\comment{
-{\tiny
-	\lstinputlisting[language=Python]{code/MultLayer.py}
-}}
 \end{frame}
 
 \begin{frame}{}
@@ -54,13 +37,30 @@
 			\frac{\partial v_6}{\partial v_5} 
 			\frac{\partial v_5}{\partial v_2}  
 			\frac{\partial v_2}{\partial y}\\
-			& = 1.cos(v_5).v^4.1 \\
+			& = 1.cos(v_5).v_4.1 \\
 			\frac{\partial f}{\partial y}&=\frac{\partial v_8}{\partial y}
-			= cos(v_5)v^4 \\
+			= cos(v_5)v_4 \\
 			&= cos(v_2v_4)v_4 \\
 			&= cos(v^2_1y)v^2_1 \\
 			&= cos(x^2y)x^2
 			\end{align*}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\begin{frame}{Unit operations (and a little bit of python)}
+\begin{columns}
+	\begin{column}{.5\textwidth}
+		\includegraphics[width=.9\textwidth, center]{figuras/wx_forward_pass.png}
+		\lstinputlisting[language=Python, basicstyle=\tiny]{code/MultLayer.py}
+	\end{column}
+	\begin{column}{.5\textwidth}
+		\includegraphics[width=.9\textwidth, center]{figuras/wx_backward_pass.png}
+		\lstinputlisting[language=Python, basicstyle=\tiny]{code/AddLayer.py}
+	\end{column}
+\end{columns}
+\comment{
+	{\tiny
+		\lstinputlisting[language=Python]{code/MultLayer.py}
+}}
 \end{frame}

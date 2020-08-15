@@ -15,11 +15,24 @@
 	\end{block}
 \end{frame}
 
+\begin{frame}{Unit operations (and a little bit of python)}
+\begin{columns}
+	\begin{column}{.4\textwidth}
+		\includegraphics[width=.9\textwidth, center]{figuras/wx_forward_pass.png}
+	\end{column}
+	\begin{column}{.4\textwidth}
+		\includegraphics[width=.9\textwidth, center]{figuras/wx_backward_pass.png}
+	\end{column}
+\end{columns}
+	
+	\lstinputlisting[language=Python]{code/MultLayer.py}
+\end{frame}
+
 \begin{frame}{}
+	\includegraphics[width=.7\textwidth, center]{figuras/backprop_eg1.png}
 	\begin{columns}[T]
 		\begin{column}{.5\textwidth}
-			\includegraphics[width=1.1\textwidth, center]{figuras/backprop_eg1.png}
-			%{\tiny 
+		
 			\begin{align*}
 					\frac{\partial v_8}{\partial z}&= 
 					\frac{\partial v_8}{\partial v_7} 
@@ -29,7 +42,6 @@
 					\frac{\partial v_8}{\partial z}&=\frac{\partial f}{\partial z} 
 					= e^{v_3}=e^z 
 			\end{align*}
-			%}
 		\end{column}
 		\begin{column}{.5\textwidth}
 			\begin{align*}

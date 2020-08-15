@@ -1,60 +1,31 @@
-\section{Introduction}
-
-\begin{frame}{Fitting a function to data}
-		\begin{block}{Description (supervised learning)}
-		Given a set of data $(x_1,y_1),(x_2,y_2), \dots, (x_n,y_n)$, can 
-		we find a function $y=f(x)$ that "fits" this data? 		
-		\end{block}		
-		\begin{block}{Questions}
+\section{Introduction and plan}
+\begin{frame}{}
+	\begin{itemize}
+		\item Part \Romannum{1}	
+%		\begin{block}{Part 1}
 			\begin{itemize}
-				\item What is this function $f(x)$?
-				\item What does "fit" mean? 
-				\item How do we know this works? 
-				\item What kinds of problems can we solve? 
+				\item Problem definition (rely on supervised learning)
+				\item Compute graph and gradients 
+				\item A little about deep learning libraries. 
 			\end{itemize}
-		\end{block}
+%		\end{block}
+		\item Part \Romannum{2}
+%		\begin{block}{Part 2}
+			\begin{itemize}
+				\item Need for different architectures
+				\item Convolution networks 
+				\item Recurrent networks  
+			\end{itemize}
+%		\end{block}
+		\item Not covered 
+%		\begin{block}{Parts I wish I had the time to cover}
+			\begin{itemize}
+				\item Diagram of neurons firing and how it is supposed to work. 
+				\item Historical perspective 
+				\item Recent advances and the brave new world of ML everywhere
+				\item Tutorial on a library like pytorch or keras 
+			\end{itemize}
+		\item Expectation and whats next
+%		\end{block}
+	\end{itemize}
 \end{frame}
-
-\begin{frame}{More about $f(x)$}
-	\begin{block}{Class of functions} 
-		Starting with a function $f(x;\theta_1,\theta_2,\dots, \theta_n)$
-		where $x$ is the input to the function and $\theta s$ are its parameters, 
-		we need to find the set of $\theta s$ that best "fits" the give 
-		data $(x_1,y_1),(x_2,y_2), \dots, (x_n,y_n)$ 
-		
-	\end{block}
-	\begin{block}{Class of linear functions}
-		Consider  $f(x) = ax+b$. If we can say, with some confidence, that 
-		our data is linearly related,  we need to find  
-		$\theta_1=a$, $\theta_2=b$ that {\it fits} the given data. 
-		We can also write it as $f(x;a,b) = ax+b$. 
-	\newline 
-	Preferred,  
-	\begin{align}
-	f(x;\theta_1,\theta_2) &= \theta_1x+\theta_2	
-	\end{align}
-
-	\end{block}
-
-\end{frame}
-\begin{frame}{Fit}
-	\begin{block}{Squared Euclidean distance as one possible measure of fit}
-		Let $L_i$ be the squared Euclidean distance between the predicted 
-		value, $\hat{y_i}=f(x_i)$ and the actual, $y_i$. Then,  
-		\begin{align}
-		L_i &=z_i^2 \\
-		z_i &=y_i-f(x_i)\\
-		    &=y_i-\theta_1 x_i-\theta_2 
-		\end{align}
-		Minimizing $L_i$ with respect to the parameters $\theta_1$ and $\theta_2$,
-		\begin{align}
-		\frac{\partial L_i}{\partial \theta_1} &= 
-		\frac{\partial z_i^2}{\partial z_i} \; 
-		\frac{\partial z_i}{\partial \theta_1}  \\
-		\frac{\partial L_i}{\partial \theta_2} &= 
-		\frac{\partial z_i^2}{\partial z_i} \; 
-		\frac{\partial z_i}{\partial \theta_2}  \\
-		\end{align}
-	\end{block}
-\end{frame}
-

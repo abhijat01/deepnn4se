@@ -17,10 +17,12 @@
 \usepackage{ifthen}
 \usepackage{capt-of}
 \usepackage{listings}
+%\usepackage{minted}
 \usetheme{Berlin}
 \usecolortheme{ufrn}
 \usepackage{soul}
 \usepackage{algorithm,algorithmic}
+\usepackage{romannum}
 %\usepackage{enumitem}
 \usepackage[export]{adjustbox}
 \newcommand{\comment}[1]{}
@@ -64,6 +66,7 @@
 	stringstyle=\color{red}
 	}
 \begin{document}
+	
 \setlength{\abovedisplayskip}{0pt}
 \setlength{\belowdisplayskip}{0pt}
 \setlength{\abovedisplayshortskip}{0pt}
@@ -75,8 +78,9 @@
 	\tableofcontents
 \end{frame}
 
+\input{tex/introduction}
 \input{tex/intro-math}
-\include{tex/introduction}
+\include{tex/intro-2-fit}
 \include{tex/sigmoid} 
 \include{tex/high-dim}
 \include{tex/multi-layer}

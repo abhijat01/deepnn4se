@@ -1,4 +1,3 @@
-
 class AdditionLayer:
     def __init__(self):
         self.cache = {}
@@ -12,3 +11,5 @@ class AdditionLayer:
         x_grad = incoming_grad
         w_grad = incoming_grad
         return x_grad, w_grad
+
+   

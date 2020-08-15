@@ -38,7 +38,7 @@
 
 \end{frame}
 \begin{frame}{Fit}
-	\begin{block}{Squared Euclidean distance as one possible measure of fit}
+	\begin{block}{Mean squared Euclidean distance as one possible measure of fit}
 		Let $L_i$ be the squared Euclidean distance between the predicted 
 		value, $\hat{y_i}=f(x_i)$ and the actual, $y_i$. Then,  
 		\begin{align}
@@ -53,8 +53,26 @@
 		\frac{\partial z_i}{\partial \theta_1}  \\
 		\frac{\partial L_i}{\partial \theta_2} &= 
 		\frac{\partial z_i^2}{\partial z_i} \; 
-		\frac{\partial z_i}{\partial \theta_2}  \\
+		\frac{\partial z_i}{\partial \theta_2} 
 		\end{align}
+	\end{block}
+\end{frame}
+
+\begin{frame}%{Mean squared distance and fit}
+	For $n$ data points, mean  loss is 
+	\begin{align*}
+		L = \frac{1}{n} \sum_{i=1}^{i=n}L_i  
+		  = \frac{1}{n} \sum_{i=1}^{i=n} (y_i-\theta_1 x_i-\theta_2)^2
+	\end{align*}
+	{\it In practice, we choose a much smaller subset of data, called a batch, compute 
+	mean loss over this batch and run  optimization step using the gradient of loss 
+	(more on this later).} 
+	\begin{block}{Two different spaces}
+		\begin{itemize}
+			\item Space spanned $x$ and $y$. Optimization tries to find the surface that best 
+			fits the data. 
+			\item Space spanned by $\theta s$. We minimize the loss function in this space.  
+		\end{itemize}
 	\end{block}
 \end{frame}
 

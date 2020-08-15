@@ -17,7 +17,6 @@
 \usepackage{ifthen}
 \usepackage{capt-of}
 \usepackage{listings}
-%\usepackage{minted}
 \usetheme{Berlin}
 \usecolortheme{ufrn}
 \usepackage{soul}
@@ -25,6 +24,8 @@
 \usepackage{romannum}
 %\usepackage{enumitem}
 \usepackage[export]{adjustbox}
+%\usepackage{natbib} 
+%\setcitestyle{numbers}
 \newcommand{\comment}[1]{}
 
 \setbeamertemplate{caption}[numbered]
@@ -36,6 +37,7 @@
 \author[Abhijat Vatsyayan]{
 	Abhijat Vatsyayan \inst{1}\\
 }
+
 \comment{
 	\institute[ Enterprise Information Strategy and Risk Management,]{
 		\inst{1}%
@@ -79,7 +81,11 @@
 \end{frame}
 
 \input{tex/introduction}
-\input{tex/intro-math}
+
+\section{Notations}
+\input{tex/intro-matrix-grad}
+\input{tex/intro-compute-graph}
+
 \include{tex/intro-2-fit}
 \include{tex/sigmoid} 
 \include{tex/high-dim}
@@ -90,11 +96,8 @@
 
 \begin{frame}[allowframebreaks]
 	\frametitle{References}
-		\comment{
-			\bibliography{bib/references}
-		}
+		\bibliographystyle{amsalpha}
+		\bibliography{bib/references}
 \end{frame}
-
-
 
 \end{document}

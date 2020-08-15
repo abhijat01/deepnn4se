@@ -1,4 +1,4 @@
-class MultiplicationLayer:
+class MultiplicationLayer1D:
     def __init__(self):
         self.cache = {}
 
@@ -8,6 +8,7 @@ class MultiplicationLayer:
         return w * x
 
     def backprop(self, incoming_grad):
-        x_grad = self.cache['w'] * incoming_grad
-        w_grad = self.cache['x'] * incoming_grad
-        return x_grad, w_grad
+        x = self.cache['x']
+        w = self.cache['w']
+        return (w * incoming_grad,
+                x * incoming_grad)

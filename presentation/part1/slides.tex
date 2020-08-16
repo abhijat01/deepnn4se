@@ -25,7 +25,7 @@
 %\usepackage{enumitem}
 \usepackage[export]{adjustbox}
 
-%\usepackage{biblatex}
+%\usepackage[backend=bibtex]{biblatex}
 %\addbibresource{bib/references.bib}
 
 \newcommand{\comment}[1]{}
@@ -37,7 +37,8 @@
 \date{
 	\today}
 \author[Abhijat Vatsyayan]{
-	Abhijat Vatsyayan \inst{1}\\
+%	Abhijat Vatsyayan \inst{1}\\
+	Abhijat Vatsyayan
 }
 
 \comment{
@@ -90,13 +91,6 @@
 \include{tex/high-dim}
 \include{tex/multi-layer}
 \include{tex/basic-implementation}
-
-\comment{
-\section{References}
-\begin{frame}[allowframebreaks]
-	\frametitle{References}
-	\printbibliography
-\end{frame}
-}
+\input{tex/references}
 
 \end{document}

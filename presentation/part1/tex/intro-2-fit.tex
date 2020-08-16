@@ -64,13 +64,17 @@
 		L = \frac{1}{n} \sum_{i=1}^{i=n}L_i  
 		  = \frac{1}{n} \sum_{i=1}^{i=n} (y_i-\theta_1 x_i-\theta_2)^2
 	\end{align*}
-	{\it In practice, we choose a much smaller subset of data, called a batch, compute 
-	mean loss over this batch and run  optimization step using the gradient of loss 
-	(more on this later).} 
+	In practice
+	\begin{itemize}
+		\item Choose a small (64 or 128) random subset of training data. 
+		\item Compute predicted values, then loss.
+		\item Compute gradients of parameters W.R.T. loss and update parameters. 
+	\end{itemize}
+	An  {\bf epoch} refers to a single iteration over all training data.
 	\begin{block}{Two different spaces}
 		\begin{itemize}
-			\item Space spanned by $x$ and $y$. Optimization tries to find the surface that best 
-			fits the data. 
+			\item Space spanned by $x$ and $y$. Optimization tries to find the surface (model) 
+			in this space that best fits the data. 
 			\item Space spanned by $\theta s$. We minimize the loss function in this space.  
 		\end{itemize}
 	\end{block}

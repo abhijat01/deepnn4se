@@ -12,4 +12,3 @@ class AdditionLayer:
         w_grad = incoming_grad
         return x_grad, w_grad
 
-   

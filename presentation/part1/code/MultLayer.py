@@ -8,7 +8,8 @@ class MultiplicationLayer1D:
         return w * x
 
     def backprop(self, incoming_grad):
-        x = self.cache['x']
-        w = self.cache['w']
-        return (w * incoming_grad,
-                x * incoming_grad)
+        x_grad = self.cache['w']
+        w_grad = self.cache['x']
+        x_grad *= incoming_grad
+        w_grad *= incoming_grad
+        return x_grad, w_grad

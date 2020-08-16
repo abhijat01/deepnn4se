@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="addf62cc-befe-4772-89e5-91317c40e8ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/code.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AddLayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/AddLayer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MultLayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/MultLayer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestLayers.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestLayers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../figuras/wx_backward_pass.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../figuras/wx_backward_pass.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../figuras/wx_backward_pass.png" beforeDir="false" afterPath="$PROJECT_DIR$/../figuras/wx_backward_pass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../slides.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../slides.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/intro-compute-graph.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/intro-compute-graph.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597511986146</updated>
-      <workItem from="1597511989086" duration="1135000" />
+      <workItem from="1597511989086" duration="1991000" />
     </task>
     <servers />
   </component>
@@ -90,8 +90,24 @@
       <screen x="75" y="0" width="1845" height="1080" />
     </state>
     <state x="684" y="14" key="#TestLayers/75.0.1845.1080@75.0.1845.1080" timestamp="1597512021900" />
+    <state width="1559" height="254" key="GridCell.Tab.0.bottom" timestamp="1597545128612">
+      <screen x="75" y="0" width="1845" height="1080" />
+    </state>
+    <state width="1559" height="254" key="GridCell.Tab.0.bottom/75.0.1845.1080@75.0.1845.1080" timestamp="1597545128612" />
+    <state width="1559" height="254" key="GridCell.Tab.0.center" timestamp="1597545128612">
+      <screen x="75" y="0" width="1845" height="1080" />
+    </state>
+    <state width="1559" height="254" key="GridCell.Tab.0.center/75.0.1845.1080@75.0.1845.1080" timestamp="1597545128612" />
+    <state width="1559" height="254" key="GridCell.Tab.0.left" timestamp="1597545128612">
+      <screen x="75" y="0" width="1845" height="1080" />
+    </state>
+    <state width="1559" height="254" key="GridCell.Tab.0.left/75.0.1845.1080@75.0.1845.1080" timestamp="1597545128612" />
+    <state width="1559" height="254" key="GridCell.Tab.0.right" timestamp="1597545128612">
+      <screen x="75" y="0" width="1845" height="1080" />
+    </state>
+    <state width="1559" height="254" key="GridCell.Tab.0.right/75.0.1845.1080@75.0.1845.1080" timestamp="1597545128612" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/code$TestLayers.coverage" NAME="TestLayers Coverage Results" MODIFIED="1597512022830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$TestLayers.coverage" NAME="TestLayers Coverage Results" MODIFIED="1597545128604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

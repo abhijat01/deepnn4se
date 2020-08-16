@@ -1,5 +1,5 @@
 \section{Computation graph}
-\begin{frame}{Derivatives} 
+\begin{frame}{Derivatives in multiple dimensions} 
 	\begin{block}{ Partial derivatives of $f(x,y,z)= sin(x^2y)+e^z$}
 		\begin{align}
 			\frac{\partial f}{\partial x} &= 2xycos(x^2y) \\
@@ -11,7 +11,7 @@
 		\begin{itemize}
 			\item Analytically (shown above)
 			\item Numerically $f'(x) \approx \frac{f(x+\delta x) - f(x-\delta x)}{2\delta x}$
-			\item Auto-diff (used by deep learning libraries)
+			\item Auto-diff. Deep learning libraries use reverse mode auto-diff.
 		\end{itemize}
 \end{frame} 
 

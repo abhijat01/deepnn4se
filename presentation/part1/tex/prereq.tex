@@ -1,0 +1,40 @@
+\section{Vector derivatives and notations}
+\begin{frame}{Extending derivatives to  functions that accept vectors}
+	\begin{columns}[T]
+		\begin{column}{.5\textwidth}
+		For a function $f:\mathbb{R}^n \rightarrow \mathbb{R}$, 
+			or, equivalently, $y=f(\vec{x})$, the gradient is:
+			\begin{align}
+			\nabla_x f = \begin{bmatrix}
+			\frac{\partial f}{\partial x_1} \\
+			\frac{\partial f}{\partial x_2} \\
+			\vdots \\
+			\frac{\partial f}{\partial x_n} \\
+			\end{bmatrix}
+			\end{align}
+			For finding minima, use gradient descent (iterate):
+			\begin{align}\label{eq:gradient.desc}
+			\vec{x} =  \vec{x} - \eta \nabla_x f 
+			\end{align}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			Extending this to  $f:\mathbb{R}^n \rightarrow \mathbb{R}^n$, 
+			or $\vec{y}=f(\vec{x})$
+			, we define the Jacobian as:
+			\begin{align}
+			{\bf J} = \begin{bmatrix}
+			\frac{\partial y_1}{\partial x_{11}} & \frac{\partial y_1}{\partial x_{12}} & \dots & \frac{\partial y_1}{\partial x_{1n}}\\
+			\vdots &  & & \\
+			\frac{\partial y_m}{\partial x_{11}} & \frac{\partial y_m}{\partial x_{12}} & \dots & \frac{\partial y_m}{\partial x_{1n}} \\
+			\end{bmatrix}
+			\end{align}
+			{\tiny
+			{\it Note:}  Gradient descent works on when  $y\in \mathbb{R}$.
+			\begin{itemize}
+				\item Can we  define another function 	$L(\vec{y}):\mathbb{R}^m\rightarrow \mathbb{R}$?
+				\item What does this function mean?
+			\end{itemize} 
+			}
+		\end{column}
+	\end{columns}
+\end{frame}

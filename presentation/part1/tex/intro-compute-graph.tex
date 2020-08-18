@@ -25,7 +25,7 @@
 	\includegraphics[width=.7\textwidth, center]{figuras/backprop_eg1.png}
 	\begin{columns}[T]
 		\begin{column}{.5\textwidth}
-			\begin{align*}
+			\begin{align}
 					\frac{\partial v_8}{\partial z}&= 
 					\frac{\partial v_8}{\partial v_7} 
 					\frac{\partial v_7}{\partial v_3} 
@@ -33,10 +33,10 @@
 					&= 1.e^{v_3}.1 \\
 					\frac{\partial v_8}{\partial z}&=\frac{\partial f}{\partial z} 
 					= e^{v_3}=e^z 
-			\end{align*}
+			\end{align}
 		\end{column}
 		\begin{column}{.5\textwidth}
-			\begin{align*}
+			\begin{align}
 			\frac{\partial v_8}{\partial y}&= 
 			\frac{\partial v_8}{\partial v_6} 
 			\frac{\partial v_6}{\partial v_5} 
@@ -48,7 +48,7 @@
 			&= cos(v_2v_4)v_4 \\
 			&= cos(v^2_1y)v^2_1 \\
 			&= cos(x^2y)x^2
-			\end{align*}
+			\end{align}
 		\end{column}
 	\end{columns}
 \end{frame}

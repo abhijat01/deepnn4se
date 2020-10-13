@@ -23,9 +23,9 @@
 			\end{itemize}
 			\item Increasing depth 
 			\begin{itemize}
-				\item[-] 7 layers AlexNet
-				\item[-] 19 layers  GoogLeNet
-				\item[-] 152 layers ResNet 
+				\item[-] 8 layer AlexNet
+				\item[-] 19 layer  GoogLeNet
+				\item[-] 152 layer ResNet 
 			\end{itemize}
  
 		\end{itemize}
@@ -114,11 +114,80 @@
 
 \begin{frame}{2D Convolution} 
 	\begin{itemize}
-		\item Bias 
+		\item Bias $wx+b$ 
 		\item Stride 
 		\item Padding 
 		\item Layers or channels 
 	\end{itemize}
+	For a $5\times5$ filter with bias, you need $26$ parameters for gray scale images. 
+	If you have 3 channels (rgb), you need $5\times 5\times 3+1=76$ parameters. 
 \end{frame}
-\begin{frame}{Pooling}
+
+\begin{frame}{Max pooling}
+	\begin{figure}
+			\includegraphics[width=.7\textwidth, center]{figures/maxpool2}
+	\end{figure}
 \end{frame}
+\begin{frame}{Max pooling}
+	\begin{figure}
+		\includegraphics[width=.7\textwidth, center]{figures/maxpool3}
+	\end{figure}
+\end{frame}
+\begin{frame}{Max pooling}
+	\begin{figure}
+		\includegraphics[width=.7\textwidth, center]{figures/maxpool4}
+	\end{figure}
+\end{frame}
+\begin{frame}{Max pooling}
+	\begin{figure}
+		\includegraphics[width=.7\textwidth, center]{figures/maxpool5}
+	\end{figure}
+\end{frame}
+\begin{frame}{Max pooling}
+	\begin{figure}
+		\includegraphics[width=.7\textwidth, center]{figures/maxpool6}
+	\end{figure}
+\end{frame}
+\begin{frame}{Max pooling}
+	\begin{figure}
+		\includegraphics[width=.7\textwidth, center]{figures/maxpool7}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Image processing}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{block}{Other functions}
+				\begin{itemize}
+					\item RelU activation $max(x,0)$ 
+					\item Dropout layer 
+				\end{itemize}
+				\begin{figure}
+					\includegraphics[width=.7\textwidth]{figures/relu}
+				\end{figure}
+			\end{block}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{block}{AlexNet 2012}
+				\begin{itemize}
+					\item 8 Layers, 5 Convolutional, 3 fully connected
+					\item Used RelU and max-pooling
+					\item 61M parameters
+				\end{itemize}
+			\end{block}
+		\end{column}
+	\end{columns}
+
+\end{frame}
+
+\begin{frame}{AlexNet 2012}
+	\begin{figure}
+		\includegraphics[width=.9\textwidth, center]{figures/alexnet-arch}
+		\caption*{Alex Krizhevsky, Sutskever, Ilya and Hinton, Geoffrey E., "ImageNet Classification with Deep Convolutional Neural Networks", 2012 }
+	\end{figure}
+\end{frame}
+\begin{frame}{Typical convolution net, pytorch}
+	\input{tex/bignet-conv}
+\end{frame}
+
+

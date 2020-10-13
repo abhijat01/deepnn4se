@@ -1,0 +1,65 @@
+\section{Representation in latent space}
+\begin{frame}{Typical (simplified) CNN}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=1\textwidth]{figures/deep_cnn_transfer_learning_1}
+		\end{figure}
+	\end{center}
+\end{frame}
+\begin{frame}{Typical (simplified) CNN - remove last layer}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=1\textwidth]{figures/deep_cnn_transfer_learning_2}
+		\end{figure}
+	\end{center}
+\end{frame}
+\begin{frame}{Typical (simplified) CNN - replace with new layer}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=1\textwidth]{figures/deep_cnn_transfer_learning_3}
+		\end{figure}
+	\end{center}
+\end{frame}
+\begin{frame}{Transfer learning - pytorch}
+\input{tex/xfer-resnet18}
+\end{frame}
+\section{Autoencoders}
+\begin{frame}{Approximate identity function}
+\begin{itemize}
+	\item Let us consider $y=f(x)$ as the network function.
+	\item Let us consider another network function $y=g(x)$
+	\item Let us consider a loss function, $L(x,g(f(x))$. This could be 
+	\begin{itemize}
+		\item[-] Mean squared distance 
+		\item[-] Absolute difference 
+		\item[-] "Some" other distance metric between vectors in "some" latent space 
+	\end{itemize}  
+\end{itemize}
+	\begin{figure}
+		\includegraphics[width=.45\textwidth]{figures/autoencoder_1}
+	\end{figure}
+\end{frame}
+\begin{frame}{Autoencoders and identity function} 
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=.8\textwidth]{figures/autoencoder_1}
+		\end{figure}
+	\end{center}
+\end{frame}
+\begin{frame}{Autoencoders and identity function} 
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=.5\textwidth]{figures/autoencoder_2}
+		\end{figure}
+	\end{center}
+\end{frame}
+\begin{frame}{Autoencoders and identity function} 
+	\begin{center}
+		\begin{figure}
+			\includegraphics[width=.9\textwidth]{figures/autoencoder_3}
+		\end{figure}
+	\end{center}
+\end{frame}
+
+
+

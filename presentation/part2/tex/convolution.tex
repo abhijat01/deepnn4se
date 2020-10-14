@@ -33,6 +33,7 @@
 	\begin{column}{.5\textwidth}
 		\begin{figure}
 			\includegraphics[width=1.2\textwidth, center]{figures/ilsvrc_2015_plot}
+			\caption*{Top 5 classification error rate}
 		\end{figure}
 	\end{column}
 \end{columns}
@@ -121,6 +122,11 @@
 	\end{itemize}
 	For a $5\times5$ filter with bias, you need $26$ parameters for gray scale images. 
 	If you have 3 channels (rgb), you need $5\times 5\times 3+1=76$ parameters. 
+	
+	
+	Layers typically have multiple filters, each filter resulting in a single output channel. 
+	Hence, a layer with 200 $5\times5$ filters (with bias) for 3 channel inputs  
+	will have $76\times200=15,200$ parameters. Corresponding output will contain 200 channels. 
 \end{frame}
 
 \begin{frame}{Max pooling}
@@ -159,11 +165,20 @@
 		\begin{column}{.5\textwidth}
 			\begin{block}{Other functions}
 				\begin{itemize}
-					\item RelU activation $max(x,0)$ 
+					\item RelU activation: $max(x,0)$ 
+					\item Leaky RelU 
+					\[
+					f(x;.1)= 
+					\begin{cases}
+					x,& \text{if } x\geq 0\\
+					.1x,              & \text{otherwise}
+					\end{cases}
+					\] 
 					\item Dropout layer 
 				\end{itemize}
 				\begin{figure}
-					\includegraphics[width=.7\textwidth]{figures/relu}
+					\includegraphics[width=.3\textwidth]{figures/relu}
+					\caption*{\tiny{RelU}}
 				\end{figure}
 			\end{block}
 		\end{column}

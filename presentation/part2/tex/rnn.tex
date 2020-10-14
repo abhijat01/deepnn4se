@@ -6,7 +6,7 @@
 			\begin{itemize}
 				\item Natural language tasks 
 				\item Event processing  
-				\item Statefull systems in general
+				\item Stateful systems in general
 			\end{itemize}	
 	%	\end{column}
 	%	\begin{column}{.5\textwidth}
@@ -21,6 +21,27 @@
 
 	%	\end{column}
 	%\end{columns}
+\end{frame}
+
+\begin{frame}{Note about working with sentences}
+\begin{itemize}
+	\item One-hot encodings
+		\begin{itemize}
+			\item[-] Very long vectors 
+			\item[-] Vectors do not represent relationship between words.
+		\end{itemize} 
+	\item Word embeddings, e.g., word2vec  
+	\begin{itemize}
+		\item[-] Uses a sliding window to predict a word given surrounding context
+		\item[-] Captures some key relationship between words. 
+		\item[-] Given enough data, models often learn embeddings.  
+	\end{itemize}
+	\item Sub-word models 
+		\begin{itemize}
+			\item[-] Works better with social media and informal speech
+			\item[-] Languages that may "create" new words on the fly (Sanskrit).
+		\end{itemize} 
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Functions of form $y_t = f(y_{t-1}, x_t; \theta)$}

@@ -4,10 +4,10 @@ import torch.nn as nn
 from torchvision import datasets, models, transforms
 
 model = models.resnet18(pretrained=True)
-num_ftrs = model_ft.fc.in_features
+in_features = model.fc.in_features
 
 # Here the size of each output sample is set to 2.
-model.fc = nn.Linear(num_ftrs, 2)
+model.fc = nn.Linear(in_features, 2)
 
 \end{lstlisting}
 
@@ -15,6 +15,6 @@ model.fc = nn.Linear(num_ftrs, 2)
 for param in model.parameters():
   param.requires_grad = False
   
-num_ftrs = model_ft.fc.in_features
-model.fc = nn.Linear(num_ftrs, 2)
+in_features = model.fc.in_features
+model.fc = nn.Linear(in_features, 2)
 \end{lstlisting}

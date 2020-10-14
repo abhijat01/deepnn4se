@@ -1,8 +1,15 @@
-\section{Feature learning and reusing models}
-\begin{frame}{Transfer learning - image classification}
+\section{Transfer learning, auto-encoders}
+
+\begin{frame}{Transfer learning - image classification with CNN}
+\begin{itemize}
+	\item Earlier layers in convolution networks extract generic features (edges etc.)
+	\item Layers get more specialized towards the end
+	\item Training can take weeks. A trained model represents significant effort
+	from experts. 
+\end{itemize}
 	\begin{center}
 		\begin{figure}
-			\includegraphics[width=1\textwidth]{figures/deep_cnn_transfer_learning_1}
+			\includegraphics[width=.7\textwidth]{figures/deep_cnn_transfer_learning_1}
 		\end{figure}
 	\end{center}
 \end{frame}
@@ -26,17 +33,18 @@
 
 \begin{frame}{Auto-encoders and approximate identity function}
 \begin{itemize}
-	\item Let us consider $y=f(x)$ as the network function.
-	\item Let us consider another network function $y=g(x)$
+	\item Let us consider $y=f(x)$ as the network function. 
+	\item Let us consider another network function $z=g(y)$ and $z$ has same shape as $x$.
 	\item Let us consider a loss function, $L(x,g(f(x))$. This could be 
 	\begin{itemize}
-		\item[-] Mean squared distance 
-		\item[-] Absolute difference 
+		\item[-] Squared distance $\frac{1}{n}\sum\limits_{i}(x_i-z_i)^2  $
+		\item[-] Absolute difference $\frac{1}{n}\sum\limits_{i}|x_i-z_i|$
 		\item[-] "Some" other distance metric between vectors in "some" latent space 
 	\end{itemize}  
 \end{itemize}
 	\begin{figure}
-		\includegraphics[width=.45\textwidth]{figures/autoencoder_1}
+		\includegraphics[width=.2\textwidth]{figures/autoencoder_1}
+		\caption*{\tiny{$y=f(x)$}}
 	\end{figure}
 \end{frame}
 \begin{frame}{Autoencoders and identity function} 

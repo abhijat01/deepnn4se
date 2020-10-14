@@ -4,16 +4,17 @@
 \begin{columns}
 	\begin{column}{.5\textwidth}
 		\begin{figure}
-			\includegraphics[width=1\textwidth]{figures/adverserial-net}
+			\includegraphics[width=.8\textwidth]{figures/adverserial-net}
+			\caption*{Classification network}
 		\end{figure}
 	\end{column}
 	\begin{column}{.5\textwidth}
-		Let $\hat{y}$ be desired,  $y$ be the predicted label, 
-		and $\hat{x}$ be the desired image 
-		\begin{enumerate}
-			\item Simple loss function, $L=D(\hat{y},y)$
-			\item Another loss function, $L=D_1(\hat{y},y) + \lambda D_2(\hat{x},x) $
-		\end{enumerate}
+		Let $\hat{y}$ be the desired label,  $y$ be the predicted label.
+		\begin{itemize}
+			\item  Consider  the loss function $L=D_1(\hat{y},y)$ 
+			\item  If $\hat{x}$ is the desired image, consider another loss function 
+				$L=D_1(\hat{y},y) + \lambda D_2(\hat{x},x) $
+		\end{itemize}
 	\end{column}
 \end{columns}
 \end{frame}
@@ -40,7 +41,8 @@
 \begin{frame}{Generative adversarial networks - intuition}
 \begin{center}
 	\begin{figure}
-		\includegraphics[width=1\textwidth]{figures/gan-simple}
+		\includegraphics[width=.8\textwidth]{figures/gan-simple}
+		\caption*{Learning data distribution}
 	\end{figure}
 \end{center}
 \end{frame}

@@ -1,0 +1,64 @@
+\section{Introduction and plan}
+\begin{frame}{}
+	\begin{itemize}
+		\item Part \Romannum{1}	
+%		\begin{block}{Part 1}
+			\begin{itemize}
+				\item Problem definition (rely on supervised learning)
+				\item Compute graph and gradients 
+				\item A little about deep learning libraries. 
+			\end{itemize}
+%		\end{block}
+		\item Part \Romannum{2}
+%		\begin{block}{Part 2}
+			\begin{itemize}
+				\item Need for different architectures
+				\item Convolution networks
+				\item Transfer learning, autoencoders
+				\item Recurrent networks  
+				\item Miscellaneous topics
+					\begin{itemize}
+						\item[-] Adversarial attacks 
+						\item[-] GAN 
+						\item[-] Attention 
+					\end{itemize}
+			\end{itemize}
+%		\end{block}
+		\item Not covered 
+%		\end{block}
+	\end{itemize}
+\end{frame}
+\begin{frame}{Need for different kind of functions}
+	\begin{block}{Discussed previously}
+		\begin{itemize}
+			\item Simple, linear layers can be connected together to form deep networks.
+			\item Linear layers should be separated using non-linear functions (layers) - also referred to as activations, e.g., $RelU(x)$, $\sigma(x)$ .
+			\item Mathematically, learning is possible. In reality, people struggled to make 
+			deep networks learn.
+			\begin{itemize}
+				\item Vanishing gradients
+				\item Compute capacity 
+				\item Availability of data 
+			\end{itemize}
+		\end{itemize}
+	\end{block}
+\end{frame}
+
+\begin{frame}{New developments}
+	\begin{itemize}
+		\item Activation functions  
+		\item Regularization techniques (drop off, batch normalization) 
+		\item Data (Google, Facebook,  $\dots$), standard datasets and competitions 
+		\begin{itemize}
+			\item[-] Data collected by internet and social media companies, digital consumer 
+			products like Cameras and Phones.  
+			\item[-] Dataset and  benchmarks created by research labs and universities
+				\footnote[frame]{See Russakovsky et al. 2015 for an example}  
+			\item[-] Competitions and conferences organized around some of the datasets and 
+			benchmarks  
+		\end{itemize}
+		\item CPUs, GPUs, nVidia
+		\item {\it "New" functions} 
+	\end{itemize}
+\end{frame}
+

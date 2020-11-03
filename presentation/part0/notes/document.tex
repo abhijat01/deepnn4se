@@ -1,0 +1,65 @@
+\documentclass[14pt, twocolumn]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{hyperref}
+%opening
+\title{}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+
+\section*{Introduction}
+Thanks for the feedback. Every single feedback response requested more information on the topic
+hence here we are.
+\begin{itemize}
+	\item Lack of blackboard for math compounded with remote presentation - feel free to ask 
+	questions. Ambitious agenda so I might not be able to get to all questions but will try. 
+	\item  The group is comfortable with linear algebra, multi-variate calculus, gradients 
+	and optimization in multiple dimensions etc. Very little linear algebra in the presentation 
+	but you will need it. 
+	\item What will not be covered - refer to the slide. 
+	\item Objective - you should feel like can start playing with python code now.
+\end{itemize}
+
+\section*{Convolution network}
+Discuss why architecture matters.
+\begin{itemize}
+	\item Exploit relationships better 
+	\item Numerical stability/ease of computation.
+\end{itemize}
+
+\subsection*{ImageNet challenge}
+\begin{itemize}
+	\item Describe the challenge 
+	\item Start taking about what happened in 2012 
+\end{itemize}
+
+
+\section*{Transfer learning}
+\subsection*{Motivation}
+\begin{itemize}
+	\item People not only build models but also make the trained weights available. 
+	We will see a little bit of pytorch code. Data, fine tuning and execution all 
+	reused. 
+	\item We may not have enough data to train a deep model. 
+	\item Our task can exploit features detected by an existing pre-trained model. 
+\end{itemize}
+
+\section*{Adversarial example}
+\begin{itemize}
+	\item Start with Rohan's work 
+	\item Introduce adversarial network 
+	\item Discuss stop sign, trucks with LCDs 
+\end{itemize}
+
+\nocite{dumoulin2018guide}
+\nocite{726791}
+\nocite{43405}
+\nocite{45818}
+\nocite{10.5555/3086952}
+\nocite{NIPS2014_5346}
+\bibliography{software-engineering-ref} 
+\bibliographystyle{ieeetr}
+\end{document}

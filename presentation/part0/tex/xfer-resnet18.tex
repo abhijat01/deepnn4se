@@ -1,0 +1,20 @@
+\begin{lstlisting}[language=Python,caption={Using pretrained ResNet18},captionpos=b]
+
+import torch.nn as nn
+from torchvision import datasets, models, transforms
+
+model = models.resnet18(pretrained=True)
+in_features = model.fc.in_features
+
+# Here the size of each output sample is set to 2.
+model.fc = nn.Linear(in_features, 2)
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,caption={Freezing model parameters},captionpos=b]
+for param in model.parameters():
+  param.requires_grad = False
+  
+in_features = model.fc.in_features
+model.fc = nn.Linear(in_features, 2)
+\end{lstlisting}

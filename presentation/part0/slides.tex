@@ -1,0 +1,96 @@
+
+\documentclass[handout,t]{beamer}
+\usepackage[utf8]{inputenc}
+
+\usepackage[alf]{abntex2cite}
+\usefonttheme[onlymath]{serif}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb,lmodern, lipsum}
+\usepackage{url}
+\usepackage{pgfpages}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage{capt-of}
+\usepackage{listings}
+\usetheme{Berlin}
+\usecolortheme{ufrn}
+\usepackage{soul}
+\usepackage{algorithm,algorithmic}
+\usepackage{romannum}
+%\usepackage{enumitem}
+%\usepackage[table]{xcolor}
+\usepackage[export]{adjustbox}
+
+
+
+%\usepackage[backend=bibtex]{biblatex}
+%\addbibresource{bib/references.bib}
+
+\newcommand{\comment}[1]{}
+
+\setbeamertemplate{caption}[numbered]
+
+\title[Deep Neural Networks Basics Part-II]{
+	Introduction to Deep Learning for Scientists and Engineers Part-II}
+\date{
+	\today}
+\author[Abhijat Vatsyayan]{
+	Abhijat Vatsyayan \inst{1}\\
+	%Abhijat Vatsyayan
+}
+
+\comment{
+	\institute[ Enterprise Information Strategy and Risk Management,]{
+		\inst{1}%
+		Enterprise Information Stragtegy and Risk Management\\	
+		%\href{http://iamap.bms.com}{http://iamap.bms.com}
+	}
+}
+\definecolor{mygreen}{rgb}{0,.5,.1}
+\lstset{
+	basicstyle=\tiny, 
+	%size=10,
+	language=Java, 
+	commentstyle=\color{mygreen},    % comment style
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+	frame=single,	                   % adds a frame around the code
+	keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+	keywordstyle=\color{blue},       % keyword style
+	morekeywords={*,...},            % if you want to add more keywords to the set
+	numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+	numbersep=5pt,                   % how far the line-numbers are from the code
+	numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
+	rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+	showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+	showstringspaces=false,          % underline spaces within strings only
+	showtabs=false,                  % show tabs within strings adding particular underscores
+	stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+	stringstyle=\color{red}
+	}
+\begin{document}
+	
+\setlength{\abovedisplayskip}{0pt}
+\setlength{\belowdisplayskip}{0pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
+
+\frame{\titlepage}
+\section[]{}
+\begin{frame}{Summary}
+	\tableofcontents
+\end{frame}
+
+\input{tex/introduction}
+\input{tex/convolution}
+\input{tex/representation}
+\input{tex/rnn}
+\input{tex/misc}
+\input{tex/references}
+
+\end{document}

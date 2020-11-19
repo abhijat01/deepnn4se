@@ -11,35 +11,62 @@
 \end{frame}
 
 \begin{frame}{ImageNet Large Scale Visual Recognition Challenge}
-
-\begin{columns}
-	\begin{column}{.5\textwidth}
-		\begin{itemize}
-			\item Publicly available dataset - ImageNet (14M+, 22k categories)
-			\item Annual competition 
-			\begin{itemize}
-				\item[-] Image classification 
-				\item[-] Object detection and localization
-			\end{itemize}
-			\item Increasing depth 
-			\begin{itemize}
-				\item[-] 8 layer AlexNet
-				\item[-] 19 layer  GoogLeNet
-				\item[-] 152 layer ResNet 
-			\end{itemize}
- 
-		\end{itemize}
-	\end{column}
-	\begin{column}{.5\textwidth}
-		\begin{figure}
-			\includegraphics[width=1.2\textwidth, center]{figures/ilsvrc_2015_plot}
-			\caption*{Top 5 classification error rate}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{center}
+				MNIST Dataset (60k, 10k)
+			\end{center}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{center}
+				ImageNet (14M+, 22k)
+			\end{center}
+		\end{column}
+	\end{columns}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics[width=1\textwidth, center]{figures/MnistExamples}
+				\caption*{}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+			\includegraphics[width=.8\textwidth, center]{figures/Examples-in-the-ImageNet-dataset}
+			\caption*{}
 		\end{figure}
-	\end{column}
-\end{columns}
-
- 
+		\end{column}
+	\end{columns}
 \end{frame}
+
+\begin{frame}{ImageNet Large Scale Visual Recognition Challenge}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{itemize}
+				\item Publicly available dataset - ImageNet (14M+, 22k categories)
+				\item Annual competition 
+				\begin{itemize}
+					\item[-] Image classification 
+					\item[-] Object detection and localization
+				\end{itemize}
+				\item Increasing depth 
+				\begin{itemize}
+					\item[-] 8 layer AlexNet
+					\item[-] 19 layer  GoogLeNet
+					\item[-] 152 layer ResNet 
+				\end{itemize}
+				
+			\end{itemize}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics[width=1.2\textwidth, center]{figures/ilsvrc_2015_plot}
+				\caption*{Top 5 classification error rate}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
 \begin{frame}{Using linear layer}
 \begin{columns}
 	\begin{column}{.7\textwidth}

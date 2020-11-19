@@ -1,35 +1,21 @@
 \section{Introduction}
 \begin{frame}{}
 	\begin{itemize}
-		\item Part \Romannum{0} 
+		\item A little bit of history
+		\item Different flavours of AI 
+		\item Machine learning
 		\begin{itemize}
-			\item Artificial intelligence alphabet soup 
+			\item[-] Description, types 
+			\item[-]A little bit of math 
+			\item[-] An illustrative example
 		\end{itemize}
-		\item Part \Romannum{1}	
-%		\begin{block}{Part 1}
-			\begin{itemize}
-				\item Problem definition (rely on supervised learning)
-				\item Compute graph and gradients 
-				\item A little about deep learning libraries. 
-			\end{itemize}
-%		\end{block}
-		\item Part \Romannum{2}
-%		\begin{block}{Part 2}
-			\begin{itemize}
-				\item Need for different architectures
-				\item Convolution networks
-				\item Transfer learning, autoencoders
-				\item Recurrent networks  
-				\item Miscellaneous topics
-					\begin{itemize}
-						\item[-] Adversarial attacks 
-						\item[-] GAN 
-						\item[-] Attention 
-					\end{itemize}
-			\end{itemize}
-%		\end{block}
-		\item Not covered 
-%		\end{block}
+		\item If time permits 
+		\begin{itemize}
+			\item[-] ImageNet challenges and Deep neural networks 
+			\item[-] Convolution networks, auto-encoders, transfer learning
+			\item[-] Adversarial networks 
+			\item[-] Other architectures 
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
@@ -53,7 +39,6 @@
 
 \begin{frame}{Artificial intelligence}
 	\begin{itemize}
-		\item 1956 - Dartmouth workshop 
 		\item Logic machines (50s)
 		\item Knowledge based expert systems (80s)
 		\item Language translation (60s) , 2000s, 2014 and later.  
@@ -97,14 +82,14 @@
 
 \begin{frame}{Neural Networks}
 	
-	{\tiny 
+	{\small 
 	\begin{description}
 		\item[1943:] Warren McCulloch and Walter Pits connected neurons, computation, logic and learning.
 		\item[1950:] Minsky and Dean Edmonds build first neural network computer. 3000 vacuum tubes, surplus 
 		auto-pilot parts from B-24 bomber. 40 Neurons. 
 		\item[1969:] Minsky and Papert publish perceptron - simple linear networks could not learn basic 
 		functions. 
-		\item[1980s:] Jeff Hinton, David Rumelhart, Jeff Hinton and Ronald Williams applied back propagation 
+		\item[1980s:] David Rumelhart, Jeff Hinton and Ronald Williams applied back propagation 
 		(again) for training multi-layer neural networks. Rumelhart's work also created the foundations for 
 		Recurrent Neural Networks. 
 		\item[1990s:] LSTM networks by Hochreiter and Schmidhuber 1997. CNN for handwritten digit recognition - Yann LeCun. 
@@ -138,10 +123,19 @@
 		\end{column}
 		\begin{column}{.5\textwidth}
 			\begin{center}
-				Narrow
+			\href{https://www.youtube.com/watch_popup?v=vIci3C4JkL0}{Narrow}	
 			\end{center}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\input{tex/convolution}
+
+\begin{frame}{\hypertarget{obama_funny_pic}{Why do you think this picture is funny?}}
+	\begin{figure}
+		\includegraphics[width=.87\textwidth, center]{figures/obama-funny}
+		\caption*{{\tiny Credit:{\em http://karpathy.github.io/2012/10/22/state-of-computer-vision/}}}
+	\end{figure}
 \end{frame}
 
 

@@ -1,0 +1,6 @@
+src_dir=/home/abhijat/Presentations/deepnn4se/presentation/part2/figures 
+dst_dir=/home/abhijat/Presentations/deepnn4se/presentation/part0/figures 
+for f in MnistExamples.png Examples-in-the-ImageNet-dataset.png ilsvrc_2015_plot.png conv-slide1-cropped.PNG conv-slide2-cropped.PNG conv-slide3-cropped.PNG conv-slide4-cropped.PNG conv-slide5-cropped.PNG maxpool2.png maxpool3.png maxpool4.png maxpool5.png maxpool6.png maxpool7.png relu.png alexnet-arch.png
+do 
+	ln -s $src_dir/$f $dst_dir/$f 
+done

@@ -39,6 +39,23 @@
 	\end{columns}
 \end{frame}
 
+\begin{frame}{Image processing}
+	\begin{columns}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics[width=.9\textwidth, center]{figures/object_locationzation_eg1.png}
+				\caption*{Localization}
+			\end{figure}
+		\end{column}
+		\begin{column}{.5\textwidth}
+			\begin{figure}
+				\includegraphics[width=.9\textwidth, center]{figures/semantic_segmentation_eg1.png}
+				\caption*{Segmentation}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
 \begin{frame}{ImageNet Large Scale Visual Recognition Challenge}
 	\begin{columns}
 		\begin{column}{.5\textwidth}
@@ -55,7 +72,6 @@
 					\item[-] 19 layer  GoogLeNet
 					\item[-] 152 layer ResNet 
 				\end{itemize}
-				
 			\end{itemize}
 		\end{column}
 		\begin{column}{.5\textwidth}
@@ -69,12 +85,19 @@
 
 \begin{frame}{AlexNet 2012}
 	\begin{figure}
-		\includegraphics[width=.9\textwidth, center]{figures/alexnet-arch}
-		\caption*{Alex Krizhevsky, Sutskever, Ilya and Hinton, Geoffrey E., "ImageNet Classification with Deep Convolutional Neural Networks", 2012 }
+		\includegraphics[width=.6\textwidth, center]{figures/alexnet-arch}
+		\caption*{{\tiny Alex Krizhevsky, Sutskever, Ilya and Hinton, Geoffrey E., "ImageNet Classification with Deep Convolutional Neural Networks", 2012 }}
 	\end{figure}
+	\begin{description}
+		\item[]AlexNet:] ~61m parameters, 8 layers
+		\item[GoogLeNet:] ~6.7m parameter, 22 layers
+		\item[ResNet:] ResNet-50, ResNet-101, ResNet-152
+		\item[Question:]Are deeper networks always better?
+	\end{description}
+	
 \end{frame}
-\begin{frame}{Typical convolution net, pytorch}
-	\input{tex/bignet-conv}
-\end{frame}
+
+
+
 
 

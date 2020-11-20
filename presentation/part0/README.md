@@ -15,4 +15,11 @@ Since most of the people won't have a strong programming
 background, we should spend a little more time on the backprop, layers and how we can program the graph. 
 
 
+## Compiling on command line 
 
+ You might this usefull on windows with  MikTex and Texstudios installed in  portable mode: 
+
+  ```
+    MIKTEX_BASE=<i>
+    "$MIKTEX_BASE/texmfs/install/miktex/bin/x64/pdflatex.exe" -synctex=1 -interaction=nonstopmode "slides".tex
+  ```

@@ -43,7 +43,21 @@ class PolynomialLayer(nn.Module):
         print(self.weights)
 
 
+class MultiLinearRegression(nn.Module):
+    def __init__(self, fan_out):
+        super().__init__()
+        self.linear1 = nn.Linear(in_features=1, out_features=fan_out)
+        self.sig = nn.Sigmoid() 
+        self.linear2 = nn.Linear(in_features=fan_out, out_features=1)
 
+    def forward(self, x):
+        input_x = x
+        if not torch.is_tensor(x):
+            input_x = torch.from_numpy(x).type(torch.float)
+        input_x = torch.reshape(input_x, (-1,1))
+        o = self.linear1(input_x)
+        o = self.sig(o)
+        return self.linear2(o)
 
 
 
